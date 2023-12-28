@@ -1,0 +1,15 @@
+// _font.scss
+
+@function get-font-prop($font-name, $prop-name) {
+  @return map-get(map-get($font-specs, $font-name), $prop-name);
+}
+
+@mixin apply-font($font-name) {
+  font-family: get-font-prop($font-name, "family");
+  font-weight: get-font-prop($font-name, "weight");
+  line-height: get-font-prop($font-name, "line-height");
+  font-size: get-font-prop($font-name, "size");
+  @if map-has-key(map-get($font-specs, $font-name), "variant-numeric") {
+    font-variant-numeric: get-font-prop($font-name, "variant-numeric");
+  }
+}

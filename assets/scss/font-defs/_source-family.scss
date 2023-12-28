@@ -1,0 +1,138 @@
+// Adobe Source Family—Source Code Pro, Source Sans 3, Source Serif 4
+// Available under Open Font License
+{{ $fontPath := "fonts/source-family" }}
+
+// Source Code Pro Font-Face Definitions
+@font-face {
+  font-family: 'source-code';
+  font-style: normal;
+  font-weight: 700; // Bold
+  src: url('{{ $fontPath | relURL }}SourceCodePro-Bold.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-code';
+  font-style: italic;
+  font-weight: 700; // Bold Italic
+  src: url('{{ $fontPath | relURL }}SourceCodePro-BoldIt.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-code';
+  font-style: italic;
+  font-weight: 400; // Italic
+  src: url('{{ $fontPath | relURL }}SourceCodePro-It.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-code';
+  font-style: normal;
+  font-weight: 400; // Regular
+  src: url('{{ $fontPath | relURL }}SourceCodePro-Regular.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+// Source Code VF Font-Face Definitions (assuming VF stands for variable fonts)
+@font-face {
+  font-family: 'source-code';
+  font-style: italic;
+  src: url('{{ $fontPath | relURL }}SourceCodeVF-Italic.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-code';
+  font-style: normal;
+  src: url('{{ $fontPath | relURL }}SourceCodeVF-Upright.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+// Source Sans Font-Face Definitions
+@font-face {
+  font-family: 'source-sans';
+  font-style: normal;
+  font-weight: 700; // Bold
+  src: url('{{ $fontPath | relURL }}SourceSans3-Bold.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-sans';
+  font-style: italic;
+  font-weight: 700; // Bold Italic
+  src: url('{{ $fontPath | relURL }}SourceSans3-BoldIt.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-sans';
+  font-style: italic;
+  font-weight: 400; // Italic
+  src: url('{{ $fontPath | relURL }}SourceSans3-It.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+@font-face {
+  font-family: 'source-sans';
+  font-style: normal;
+  font-weight: 400; // Regular
+  src: url('{{ $fontPath | relURL }}SourceSans3-Regular.otf.woff2') format('woff2');
+  font-display: swap;
+  font-stretch: normal;
+  font-variant: normal;
+}
+
+
+// Source Serif 4 Font-Face Definitions
+@font-face {
+  font-family: 'source-serif';
+  font-style: normal;
+  font-weight: 700; // Bold
+  src: url('{{ $fontPath | relURL }}SourceSerif4-Bold.otf.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'source-serif';
+  font-style: italic;
+  font-weight: 700; // Bold Italic
+  src: url('{{ $fontPath | relURL }}SourceSerif4-BoldIt.otf.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'source-serif';
+  font-style: normal;
+  font-weight: 400; // Regular
+  src: url('{{ $fontPath | relURL }}SourceSerif4-Regular.otf.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'source-serif';
+  font-style: italic;
+  font-weight: 400; // Italic
+  src: url('{{ $fontPath | relURL }}SourceSerif4-It.otf.woff2') format('woff2');
+  font-display: swap;
+}

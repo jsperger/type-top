@@ -1,0 +1,11 @@
+@import "font_specs";
+@import "font";
+@import "./font-defs/heliotrope";
+@import "./font-defs/source-family";
+
+.body-text,
+p,
+main,
+body {
+  @include apply-font("source-serif-body");
+}

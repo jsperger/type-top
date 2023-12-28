@@ -1,0 +1,122 @@
+$fontPath: "../source-family";
+
+@function get-font-prop($font-name, $prop-name) {
+  @return map-get(map-get($font-specs, $font-name), $prop-name);
+}
+
+@mixin apply-font($font-name) {
+  font-family: get-font-prop($font-name, "family");
+  font-weight: get-font-prop($font-name, "weight");
+  line-height: get-font-prop($font-name, "line-height");
+  font-size: get-font-prop($font-name, "size");
+  @if map-has-key(map-get($font-specs, $font-name), "variant-numeric") {
+    font-variant-numeric: get-font-prop($font-name, "variant-numeric");
+  }
+}
+// Source Serif 4 Font-Face Definitions
+@font-face {
+  font-family: "source-serif";
+  font-style: normal;
+  font-weight: 700; // Bold
+  src: url("#{$fontPath}/SourceSerif4-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif";
+  font-style: italic;
+  font-weight: 700; // Bold Italic
+  src: url("#{$fontPath}/SourceSerif4-BoldIt.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif";
+  font-style: normal;
+  font-weight: 400; // Regular
+  src: url("#{$fontPath}/SourceSerif4-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "source-serif";
+  font-style: italic;
+  font-weight: 400; // Italic
+  src: url("#{$fontPath}/SourceSerif4-It.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 400; // Book
+  src: url("../heliotrope/heliotrope_ot_3_book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 400; // Book
+  font-style: italic;
+  src: url("../heliotrope/heliotrope_ot_3_book_italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 500; // Medium
+  src: url("../heliotrope/heliotrope_ot_4_medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 500; // Medium
+  font-style: italic;
+  src: url("../heliotrope/heliotrope_ot_4_medium_italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 600; // Semibold
+  src: url("../heliotrope/heliotrope_ot_6_semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 600; // Semibold
+  font-style: italic;
+  src: url("../heliotrope/heliotrope_ot_6_semibold_italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 800; // Black
+  src: url("../heliotrope/heliotrope_ot_8_black.woff2") format("woff2");
+}
+@font-face {
+  font-family: "heliotrope";
+  font-weight: 800; // Black
+  font-style: italic;
+  src: url("../heliotrope/heliotrope_ot_8_black_italic.woff2") format("woff2");
+}
+
+$font-specs: (
+  "heliotrope-body": (
+    "family": "heliotrope",
+    "weight": 400,
+    "line-height": 1.42,
+    "size": 0.96rem,
+    "variant-numeric": null
+      // Assuming no specific variant-numeric for this font,,,,
+  ),
+
+  "source-serif-body": (
+    "family": "source-serif",
+    "weight": 400,
+    "line-height": 1.42,
+    "size": 0.96rem,
+    "variant-numeric": null
+      // Assuming no specific variant-numeric for this font,,,,,,,
+  ),
+);
+
+.body-text,
+p,
+main,
+body {
+  @include apply-font("source-serif-body");
+}

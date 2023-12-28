@@ -1,0 +1,20 @@
+// _font_specs.scss
+$font-specs: (
+  "heliotrope-body": (
+    "family": "heliotrope",
+    "weight": 400,
+    "line-height": 1.42,
+    "size": 0.96rem,
+    "variant-numeric": null
+      // Assuming no specific variant-numeric for this font,,
+  ),
+
+  "source-serif-body": (
+    "family": "source-serif",
+    "weight": 400,
+    "line-height": 1.42,
+    "size": 0.96rem,
+    "variant-numeric": null
+      // Assuming no specific variant-numeric for this font,,
+  ),
+);

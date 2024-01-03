@@ -1,0 +1,3 @@
+[submodule "static/source-family/source-sans"]
+	path = static/source-family/source-sans
+	url = git@github.com:adobe-fonts/source-sans.git
